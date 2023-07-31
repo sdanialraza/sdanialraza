@@ -1,0 +1,11 @@
+# dependencies
+/node_modules
+pnpm-lock.yaml
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# production
+/build
