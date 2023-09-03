@@ -42,6 +42,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   openGraph: {
     description: "Personal website of Danial Raza",
+    images: [
+      {
+        url: "/logo.png",
+      },
+    ],
     siteName: "Danial Raza",
     title: "Danial Raza",
     type: "website",

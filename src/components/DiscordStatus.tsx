@@ -26,7 +26,7 @@ export default function DiscordStatus() {
   const status = data?.data.discord_status
 
   return (
-    <aside className="flex items-center gap-2 font-medium">
+    <aside className="flex items-center gap-2 font-semibold">
       <div className={`h-3 w-3 rounded-full ${color}`} />
       <p className="text-left">{status ? statusMappings[status] : "Loading..."}</p>
     </aside>

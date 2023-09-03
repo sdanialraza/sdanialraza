@@ -21,7 +21,7 @@ export default function Page() {
           </div>
 
           <section className="w-full">
-            <aside className="flex items-center gap-x-1 rounded-xl text-sm text-gray-500">
+            <aside className="flex items-center gap-x-1 rounded-xl text-sm dark:text-gray-400">
               <DiscordStatus />
               &mdash;
               <CurrentTime />
@@ -35,7 +35,7 @@ export default function Page() {
             About Me
             <div className="h-[2px] grow rounded-full bg-black/20 dark:bg-white/20" />
           </h1>
-          <span className="w-full max-w-[600px] text-justify text-light-gray dark:text-light-gray">
+          <span className="w-full max-w-[600px] text-justify text-gray-700 dark:text-light-gray">
             {`Hey there! I'm Danial, a ${calculateAge()}-year-old student and software developer from Pakistan now living
             in Spain. I am always very interested in bleeding-edge technologies that push the boundaries of
             what's possible. Thank you for checking my website!`}
@@ -47,7 +47,7 @@ export default function Page() {
             Hobbies
             <div className="h-[2px] grow rounded-full bg-black/20 dark:bg-white/20" />
           </h1>
-          <span className="w-full max-w-[600px] text-justify text-light-gray dark:text-light-gray">
+          <span className="w-full max-w-[600px] text-justify text-gray-700 dark:text-light-gray">
             I usually like to watch movies or shows in my free time. A couple of my favorite movies would be{" "}
             <ExternalLink href="https://www.imdb.com/title/tt2194499/">About Time</ExternalLink> and{" "}
             <ExternalLink href="https://www.imdb.com/title/tt0172495/">Gladiator</ExternalLink> and a couple of my
@@ -55,7 +55,7 @@ export default function Page() {
             <ExternalLink href="https://www.imdb.com/title/tt3032476/">Better Call Saul</ExternalLink> and{" "}
             <ExternalLink href="https://www.imdb.com/title/tt0460649/">How I Met Your Mother</ExternalLink>.
           </span>
-          <span className="w-full max-w-[600px] text-justify text-light-gray dark:text-light-gray">
+          <span className="w-full max-w-[600px] text-justify text-gray-700 dark:text-light-gray">
             Not as much as I used to but I also like playing various video games, you can check out what games I&apos;ve
             been playing recently on my{" "}
             <ExternalLink href="https://steamcommunity.com/profiles/76561198981867119/">Steam Profile</ExternalLink>.
@@ -67,7 +67,7 @@ export default function Page() {
             Technologies & Frameworks
             <div className="h-[2px] grow rounded-full bg-black/20 dark:bg-white/20" />
           </h1>
-          <span className="w-full max-w-[600px] text-justify text-light-gray dark:text-light-gray">
+          <span className="w-full max-w-[600px] text-justify text-gray-700 dark:text-light-gray">
             I primarily work with <ExternalLink href="https://www.typescriptlang.org/">TypeScript</ExternalLink>,{" "}
             <ExternalLink href="https://reactjs.org/">React</ExternalLink> (with TSX) and I&apos;ve recently started
             learning <ExternalLink href="https://www.java.com/">Java</ExternalLink> and{" "}

@@ -9,7 +9,7 @@ const { Discord, Email, GitHub, Linkedin, Twitter } = SOCIAL_LINKS
 export default function Footer() {
   return (
     <footer className="flex h-[70px] w-full items-center justify-center border-t border-gray-200 px-5 dark:border-gray-200/5 xl:px-0">
-      <div className="flex w-full max-w-[850px] items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+      <div className="flex w-full max-w-[850px] items-center justify-between text-sm text-gray-700 dark:text-gray-400">
         <section className="flex">
           <h1 className="text-md font-semibold">
             Danial Raza &mdash; <ExternalLink href={REPOSITORY_LINK}>Source Code</ExternalLink>
