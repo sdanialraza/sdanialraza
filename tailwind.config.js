@@ -5,4 +5,13 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  theme: {
+    extend: {
+      colors: {
+        "light-gray": "#bebebe",
+        "midnight-violet": "#1c1b22",
+        "pink": "#e4717a",
+      },
+    },
+  },
 }
