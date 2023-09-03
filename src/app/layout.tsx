@@ -59,6 +59,9 @@ export const metadata: Metadata = {
   },
   themeColor: [
     {
+      color: "#e4717a",
+    },
+    {
       media: "(prefers-color-scheme: light)",
       color: "#ffffff",
     },
