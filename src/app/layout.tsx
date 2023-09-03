@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
 import type { PropsWithChildren } from "react"
 
@@ -81,6 +82,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body className={`${inter.variable} flex h-full min-h-screen flex-col items-center`}>
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
