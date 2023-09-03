@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import type { PropsWithChildren } from "react"
 
 import "@/styles/globals.css"
-import { inter } from "@/util/fonts"
+import { BASE_URL, inter } from "@/util"
 import Footer from "@/components/Footer"
 
 export const metadata: Metadata = {
@@ -38,12 +38,13 @@ export const metadata: Metadata = {
   },
   keywords: ["sdanialraza", "Danial Raza", "Danial", "Raza", "Website", "Portfolio", "Projects"],
   manifest: "/site.manifest",
+  metadataBase: new URL(BASE_URL),
   openGraph: {
     description: "Personal website of Danial Raza",
     siteName: "Danial Raza",
     title: "Danial Raza",
     type: "website",
-    url: "https://sdanialraza.dev"
+    url: new URL(BASE_URL),
   },
   other: {
     "msapplication-TileColor": "#1c1b22",
