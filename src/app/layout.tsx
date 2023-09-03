@@ -44,7 +44,9 @@ export const metadata: Metadata = {
     description: "Personal website of Danial Raza",
     images: [
       {
+        height: 200,
         url: "/logo.png",
+        width: 200,
       },
     ],
     siteName: "Danial Raza",
