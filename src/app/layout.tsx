@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   category: "Personal Site",
   colorScheme: "dark light",
   creator: "Danial Raza",
-  description: "Personal website of Danial Raza",
+  description: "Personal website of Danial Raza.",
   icons: {
     apple: [
       "/apple-touch-icon.png",
@@ -41,21 +41,17 @@ export const metadata: Metadata = {
   manifest: "/site.manifest",
   metadataBase: new URL(BASE_URL),
   openGraph: {
-    description: "Personal website of Danial Raza",
-    images: [
-      {
-        url: "/logo.png",
-      },
-    ],
+    description: "Personal website of Danial Raza.",
     siteName: "Danial Raza",
     title: "Danial Raza",
     type: "website",
     url: new URL(BASE_URL),
   },
   other: {
-    "msapplication-TileColor": "#1c1b22",
+    "msapplication-TileColor": "#e4717a",
   },
   themeColor: [
+    { color: "e4717a" },
     {
       media: "(prefers-color-scheme: light)",
       color: "#ffffff",
