@@ -17,7 +17,7 @@ export default function CurrentTime() {
   return (
     <>
       <HiOutlineClock size={20} title="My Local Time" />
-      <span className="font-medium">
+      <span className="font-semibold">
         <span>{time}</span>
       </span>
     </>
