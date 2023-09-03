@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: new URL(BASE_URL),
   },
   other: {
-    "msapplication-TileColor": "#1c1b22",
+    "msapplication-TileColor": "#e4717a",
   },
   themeColor: [
     {
