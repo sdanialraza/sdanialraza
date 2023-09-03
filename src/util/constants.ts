@@ -1,8 +1,8 @@
 export const BASE_URL = "https://sdanialraza.dev" as const
 
-export const DISCORD_USER_ID = "274615157496348674" as const
-
 export const DATE_OF_BIRTH = new Date("2003-10-18")
+
+export const DISCORD_USER_ID = "274615157496348674" as const
 
 export const REPOSITORY_LINK = "https://github.com/sdanialraza/sdanialraza" as const
 
