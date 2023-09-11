@@ -1,10 +1,10 @@
 <table align="center">
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=sdanialraza&bg_color=00000000&hide_border=true&icon_color=4F8CC9&show_icons=true&text_color=ffffff&title_color=ffffff" />
+      <img src="https://github-readme-stats.vercel.app/api?username=sdanialraza&hide=contribs&hide_border=true&include_all_commits=true&show=discussions_answered&show_icons=true&theme=react" />
     </td>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sdanialraza&bg_color=00000000&count_private=true&hide_border=true&layout=compact&text_color=ffffff&title_color=ffffff" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sdanialraza&hide_border=true&layout=compact&theme=react" />
     </td>
   </tr>
 </table>
