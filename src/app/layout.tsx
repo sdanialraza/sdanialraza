@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   applicationName: "Danial Raza",
   authors: [{ name: "Danial Raza", url: "https://github.com/sdanialraza" }],
   category: "Personal Site",
-  colorScheme: "dark light",
   creator: "Danial Raza",
   description: "Personal website of Danial Raza.",
   icons: {
@@ -51,6 +50,16 @@ export const metadata: Metadata = {
   other: {
     "msapplication-TileColor": "#e4717a",
   },
+  title: {
+    default: "Danial Raza",
+    template: "%s | Danial Raza",
+  },
+}
+
+export const viewport = {
+  colorScheme: "dark light",
+  initialScale: 1,
+  minimumScale: 1,
   themeColor: [
     { color: "e4717a" },
     {
@@ -62,15 +71,7 @@ export const metadata: Metadata = {
       color: "#1c1b22",
     },
   ],
-  title: {
-    default: "Danial Raza",
-    template: "%s | Danial Raza",
-  },
-  viewport: {
-    minimumScale: 1,
-    initialScale: 1,
-    width: "device-width",
-  },
+  width: "device-width",
 }
 
 export default function RootLayout({ children }: PropsWithChildren) {
