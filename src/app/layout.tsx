@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import type { Metadata } from "next"
 import type { PropsWithChildren } from "react"
 
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         {children}
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
