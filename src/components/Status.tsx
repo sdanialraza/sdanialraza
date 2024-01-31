@@ -43,16 +43,24 @@ function displaySpotifyStatus(data: LanyardData | undefined) {
 export default function Status() {
   const { data, isLoading } = useLanyard({ userId: DISCORD_USER_ID })
   const [time, setTime] = useState("--:-- --")
+  const [hour12, setHour12] = useState(true)
+
+  const toggleHour12 = () => setHour12(!hour12)
 
   useEffect(() => {
-    setTime(new Date().toLocaleString("en-US", TIME_FORMAT_OPTIONS))
-    const interval = setInterval(() => setTime(new Date().toLocaleString("en-US", TIME_FORMAT_OPTIONS)), 5_000)
+    const options = { ...TIME_FORMAT_OPTIONS, hour12 }
+
+    setTime(new Date().toLocaleString("en-US", options))
+    const interval = setInterval(() => setTime(new Date().toLocaleString("en-US", options)), 5_000)
+
     return () => clearInterval(interval)
-  }, [])
+  }, [hour12])
 
   const color = isLoading ? "bg-gray-500" : statusColors[data?.data.discord_status ?? "offline"]
 
   const status = data?.data.discord_status
+
+  const timeTitle = `Switch to ${hour12 ? "24" : "12"}-hour format`
 
   return (
     <aside className="flex flex-col gap-2 rounded-xl dark:text-gray-400">
@@ -61,7 +69,9 @@ export default function Status() {
         <p className="text-left">{status ? statusMappings[status] : "Loading..."}</p>
         &mdash;
         <HiOutlineClock size={20} title="My Local Time" />
-        <span>{time}</span>
+        <span className="select-none" onClick={toggleHour12} title={timeTitle}>
+          {time}
+        </span>
         {displaySpotifyStatus(data?.data)}
       </aside>
     </aside>
