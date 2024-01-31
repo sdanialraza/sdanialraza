@@ -1,10 +1,9 @@
 import Image from "next/image"
 
 import { calculateAge } from "@/util"
-import CurrentTime from "@/components/CurrentTime"
-import DiscordStatus from "@/components/DiscordStatus"
 import ExternalLink from "@/components/ExternalLink"
 import profilePicture from "../../public/logo.png"
+import Status from "@/components/Status"
 
 export default function Page() {
   return (
@@ -22,9 +21,7 @@ export default function Page() {
 
           <section className="w-full">
             <aside className="flex items-center gap-x-1 rounded-xl text-sm dark:text-gray-400">
-              <DiscordStatus />
-              &mdash;
-              <CurrentTime />
+              <Status />
             </aside>
             <h1 className="text-3xl font-bold">Danial Raza</h1>
           </section>
