@@ -1,11 +1,10 @@
 "use client"
 
 import { BsSpotify } from "react-icons/bs"
-import { HiOutlineClock } from "react-icons/hi"
 import { type LanyardData, useLanyard } from "react-use-lanyard"
-import { useEffect, useState } from "react"
+import type { ReactNode } from "react"
 
-import { DISCORD_USER_ID, TIME_FORMAT_OPTIONS } from "@/util"
+import { DISCORD_USER_ID } from "@/util"
 import ExternalLink from "@/components/ExternalLink"
 
 const statusColors = {
@@ -22,10 +21,14 @@ const statusMappings = {
   offline: "Offline",
 } as const
 
-function displaySpotifyStatus(data: LanyardData | undefined) {
-  if (!data?.spotify) return null
+type SpotifyStatusProps = {
+  data: LanyardData["spotify"]
+}
 
-  const { artist, song, track_id } = data.spotify
+function SpotifyStatus({ data }: SpotifyStatusProps) {
+  if (!data) return null
+
+  const { artist, song, track_id } = data
 
   const spotifyUrl = `https://open.spotify.com/track/${track_id}`
 
@@ -40,40 +43,27 @@ function displaySpotifyStatus(data: LanyardData | undefined) {
   )
 }
 
-export default function Status() {
-  const { data, isLoading } = useLanyard({ userId: DISCORD_USER_ID })
-  const [time, setTime] = useState("--:-- --")
-  const [hour12, setHour12] = useState(true)
+type Props = {
+  children: ReactNode
+  initialData: LanyardData
+}
 
-  const toggleHour12 = () => setHour12(!hour12)
+export default function Status({ children, initialData }: Props) {
+  const { data } = useLanyard({ userId: DISCORD_USER_ID })
 
-  useEffect(() => {
-    const options = { ...TIME_FORMAT_OPTIONS, hour12 }
+  const { discord_status, spotify } = data?.data ?? initialData
 
-    setTime(new Date().toLocaleString("en-US", options))
-    const interval = setInterval(() => setTime(new Date().toLocaleString("en-US", options)), 5_000)
+  const color = statusColors[discord_status]
 
-    return () => clearInterval(interval)
-  }, [hour12])
-
-  const color = isLoading ? "bg-gray-500" : statusColors[data?.data.discord_status ?? "offline"]
-
-  const status = data?.data.discord_status
-
-  const timeTitle = `Switch to ${hour12 ? "24" : "12"}-hour format`
+  const status = statusMappings[discord_status]
 
   return (
-    <aside className="flex flex-col gap-2 rounded-xl dark:text-gray-400">
-      <aside className="flex items-center gap-2 text-sm font-semibold">
-        <div className={`h-3 w-3 rounded-full ${color}`} />
-        <p className="text-left">{status ? statusMappings[status] : "Loading..."}</p>
-        &mdash;
-        <HiOutlineClock size={20} title="My Local Time" />
-        <span className="select-none" onClick={toggleHour12} title={timeTitle}>
-          {time}
-        </span>
-        {displaySpotifyStatus(data?.data)}
-      </aside>
-    </aside>
+    <>
+      <span className={`h-3 w-3 rounded-full ${color}`} />
+      <p className="text-left">{status}</p>
+      &mdash;
+      {children}
+      <SpotifyStatus data={spotify} />
+    </>
   )
 }

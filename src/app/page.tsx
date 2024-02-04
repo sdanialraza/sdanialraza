@@ -4,7 +4,7 @@ import { calculateAge } from "@/util"
 import ExternalLink from "@/components/ExternalLink"
 import profilePicture from "../../public/logo.png"
 import Section, { SubSection } from "@/components/Section"
-import Status from "@/components/Status"
+import StatusPill from "@/components/StatusPill"
 
 export default function Home() {
   return (
@@ -21,9 +21,7 @@ export default function Home() {
           </div>
 
           <section className="w-full">
-            <aside className="flex items-center gap-x-1 rounded-xl text-sm dark:text-gray-400">
-              <Status />
-            </aside>
+            <StatusPill />
             <h1 className="text-3xl font-bold">Danial Raza</h1>
           </section>
         </div>

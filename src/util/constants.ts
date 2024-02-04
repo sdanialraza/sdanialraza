@@ -4,6 +4,8 @@ export const DATE_OF_BIRTH = new Date("2003-10-18")
 
 export const DISCORD_USER_ID = "274615157496348674" as const
 
+export const LANYARD_API_URL = `https://api.lanyard.rest/v1/users/${DISCORD_USER_ID}` as const
+
 export const REPOSITORY_LINK = "https://github.com/sdanialraza/sdanialraza" as const
 
 export const SOCIAL_LINKS = {
