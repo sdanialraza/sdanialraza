@@ -65,7 +65,7 @@ export default function Status({ children, initialData }: Props) {
     <>
       <div className="flex gap-x-2">
         <div className="flex items-center gap-x-2">
-          <span className={`ml-1 h-3 w-3 rounded-full ${color}`} />
+          <span className={`ml-1 h-3 w-3 rounded-full md:ml-0 ${color}`} />
           <p className="text-left">{status}</p>
         </div>
         &mdash;
