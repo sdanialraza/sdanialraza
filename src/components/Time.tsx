@@ -25,7 +25,7 @@ export default function Time() {
   const timeTitle = `Switch to ${hour12 ? "24" : "12"}-hour format`
 
   return (
-    <>
+    <div className="flex gap-x-2">
       <HiOutlineClock size={20} title="My Local Time" />
       <span
         className="cursor-pointer select-none underline underline-offset-2"
@@ -35,6 +35,6 @@ export default function Time() {
       >
         {time}
       </span>
-    </>
+    </div>
   )
 }

@@ -34,11 +34,15 @@ function SpotifyStatus({ data }: SpotifyStatusProps) {
 
   return (
     <>
-      &mdash;
-      <BsSpotify className="text-green-500" size={20} />
-      <ExternalLink href={spotifyUrl} title={`${song} by ${artist}`}>
-        {song}
-      </ExternalLink>
+      <span className="hidden md:inline">&mdash;</span>
+      <div className="mb-2 md:mb-0">
+        <div className="flex gap-x-2">
+          <BsSpotify className="text-green-500" size={20} />
+          <ExternalLink href={spotifyUrl} title={`${song} by ${artist}`}>
+            {song}
+          </ExternalLink>
+        </div>
+      </div>
     </>
   )
 }
@@ -59,10 +63,14 @@ export default function Status({ children, initialData }: Props) {
 
   return (
     <>
-      <span className={`h-3 w-3 rounded-full ${color}`} />
-      <p className="text-left">{status}</p>
-      &mdash;
-      {children}
+      <div className="flex gap-x-2">
+        <div className="flex items-center gap-x-2">
+          <span className={`ml-1 h-3 w-3 rounded-full ${color}`} />
+          <p className="text-left">{status}</p>
+        </div>
+        &mdash;
+        {children}
+      </div>
       <SpotifyStatus data={spotify} />
     </>
   )
