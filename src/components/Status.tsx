@@ -2,7 +2,7 @@
 
 import { BsSpotify } from "react-icons/bs"
 import { HiOutlineClock } from "react-icons/hi"
-import { LanyardData, useLanyard } from "react-use-lanyard"
+import { type LanyardData, useLanyard } from "react-use-lanyard"
 import { useEffect, useState } from "react"
 
 import { DISCORD_USER_ID, TIME_FORMAT_OPTIONS } from "@/util"
