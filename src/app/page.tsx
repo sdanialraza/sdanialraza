@@ -42,8 +42,8 @@ export default function Home() {
             <ExternalLink href="https://www.imdb.com/title/tt2194499/">About Time</ExternalLink> and{" "}
             <ExternalLink href="https://www.imdb.com/title/tt0172495/">Gladiator</ExternalLink> and a couple of my
             favorite shows would be{" "}
-            <ExternalLink href="https://www.imdb.com/title/tt3032476/">Better Call Saul</ExternalLink> and{" "}
-            <ExternalLink href="https://www.imdb.com/title/tt0460649/">How I Met Your Mother</ExternalLink>.
+            <ExternalLink href="https://www.imdb.com/title/tt0460649/">How I Met Your Mother</ExternalLink> and{" "}
+            <ExternalLink href="https://www.imdb.com/title/tt0098904/">Seinfeld</ExternalLink>.
           </SubSection>
           <SubSection>
             Not as much as I used to but I also like playing various video games, you can check out what games I&apos;ve
