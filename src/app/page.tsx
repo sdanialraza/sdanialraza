@@ -59,8 +59,8 @@ export default function Home() {
             <ExternalLink href="https://vitejs.dev/">Vite</ExternalLink> or{" "}
             <ExternalLink href="https://nextjs.org/">Next.js</ExternalLink>) for frontend and{" "}
             <ExternalLink href="https://nodejs.org/">Node.js</ExternalLink> using{" "}
-            <ExternalLink href="https://expressjs.com/">Express.js</ExternalLink> for backend development. I&apos;ve
-            also experimented with <ExternalLink href="https://www.java.com/en/">Java</ExternalLink> and a bit of{" "}
+            <ExternalLink href="https://expressjs.com/">Express</ExternalLink> for backend development. I&apos;ve also
+            experimented with <ExternalLink href="https://www.java.com/en/">Java</ExternalLink> and a bit of{" "}
             <ExternalLink href="https://www.python.org/">Python</ExternalLink>. Currently, I&apos;m learning{" "}
             <ExternalLink href="https://www.rust-lang.org/">Rust</ExternalLink> and its unique concepts.
           </SubSection>
