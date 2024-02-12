@@ -52,12 +52,17 @@ export default function Home() {
           </SubSection>
         </Section>
 
-        <Section title="Technologies & Frameworks">
+        <Section title="Frameworks & Technologies">
           <SubSection>
-            I primarily work with <ExternalLink href="https://www.typescriptlang.org/">TypeScript</ExternalLink>,{" "}
-            <ExternalLink href="https://reactjs.org/">React</ExternalLink> (with TSX) and I&apos;ve recently started
-            learning <ExternalLink href="https://www.java.com/">Java</ExternalLink> and{" "}
-            <ExternalLink href="https://reactnative.dev/">React Native</ExternalLink>.
+            I mainly work with <ExternalLink href="https://www.typescriptlang.org/">TypeScript</ExternalLink> using{" "}
+            <ExternalLink href="https://react.dev/">React</ExternalLink> (
+            <ExternalLink href="https://vitejs.dev/">Vite</ExternalLink> or{" "}
+            <ExternalLink href="https://nextjs.org/">Next.js</ExternalLink>) for frontend and{" "}
+            <ExternalLink href="https://nodejs.org/">Node.js</ExternalLink> using{" "}
+            <ExternalLink href="https://expressjs.com/">Express.js</ExternalLink> for backend development. I&apos;ve
+            also experimented with <ExternalLink href="https://www.java.com/en/">Java</ExternalLink> and a bit of{" "}
+            <ExternalLink href="https://www.python.org/">Python</ExternalLink>. Currently, I&apos;m learning{" "}
+            <ExternalLink href="https://www.rust-lang.org/">Rust</ExternalLink> and its unique concepts.
           </SubSection>
         </Section>
       </div>
