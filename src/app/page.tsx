@@ -4,12 +4,13 @@ import { calculateAge } from "@/util"
 import ExternalLink from "@/components/ExternalLink"
 import profilePicture from "../../public/logo.png"
 import Section, { SubSection } from "@/components/Section"
+import SocialLinks from "@/components/SocialLinks"
 import StatusPill from "@/components/StatusPill"
 
 export default function Home() {
   return (
     <main className="flex min-h-full w-full grow content-stretch p-2 md:p-5">
-      <div className="flex grow flex-col items-center justify-center space-y-10 overflow-hidden bg-fixed bg-center p-5 md:p-0">
+      <div className="flex grow flex-col items-center justify-center space-y-8 overflow-hidden bg-fixed bg-center p-5 md:p-0">
         <div className="flex w-full max-w-[600px] flex-col gap-y-3 rounded-lg">
           <div className="flex items-center gap-x-1">
             <Image
@@ -23,6 +24,7 @@ export default function Home() {
           <section className="w-full">
             <StatusPill />
             <h1 className="text-3xl font-bold">Danial Raza</h1>
+            <SocialLinks />
           </section>
         </div>
 

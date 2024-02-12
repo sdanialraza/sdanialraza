@@ -5,7 +5,6 @@ import type { PropsWithChildren } from "react"
 
 import "@/styles/globals.css"
 import { BASE_URL, inter } from "@/util"
-import Footer from "@/components/Footer"
 
 export const metadata: Metadata = {
   appleWebApp: {
@@ -79,7 +78,6 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en">
       <body className={`${inter.variable} flex h-full min-h-screen flex-col items-center`}>
         {children}
-        <Footer />
         <Analytics />
         <SpeedInsights />
       </body>
