@@ -76,7 +76,7 @@ export const viewport = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} flex h-full min-h-screen flex-col items-center`}>
+      <body className={`${inter.variable} bg-white dark:bg-midnight-violet`}>
         {children}
         <Analytics />
         <SpeedInsights />
