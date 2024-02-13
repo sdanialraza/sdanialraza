@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 import type { PropsWithChildren } from "react"
 
 import "@/styles/globals.css"
-import { BASE_URL, inter } from "@/util"
+import { BASE_URL } from "@/util"
 
 export const metadata: Metadata = {
   appleWebApp: {
@@ -76,7 +76,7 @@ export const viewport = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} bg-white dark:bg-midnight-violet`}>
+      <body className="bg-white dark:bg-midnight-violet">
         {children}
         <Analytics />
         <SpeedInsights />
