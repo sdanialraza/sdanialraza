@@ -20,5 +20,5 @@ export default function Section({ children, separator, title }: Props) {
 }
 
 export function SubSection({ children }: PropsWithChildren) {
-  return <span className="w-full max-w-[600px] text-justify text-gray-700 dark:text-light-gray">{children}</span>
+  return <span className="w-full max-w-[600px] text-justify text-gray-700 dark:text-gray-300/90">{children}</span>
 }

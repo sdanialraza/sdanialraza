@@ -76,7 +76,7 @@ export const viewport = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className="bg-white dark:bg-midnight-violet">
+      <body className="bg-white bg-gradient-to-br dark:bg-black dark:from-black dark:via-charcoal dark:to-black">
         {children}
         <Analytics />
         <SpeedInsights />
