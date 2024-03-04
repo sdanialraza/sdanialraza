@@ -1,10 +1,10 @@
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import type { Metadata } from "next"
-import type { PropsWithChildren } from "react"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
+import type { PropsWithChildren } from "react";
 
-import "@/styles/globals.css"
-import { BASE_URL } from "@/util"
+import "@/styles/globals.css";
+import { BASE_URL } from "@/util";
 
 export const metadata: Metadata = {
   appleWebApp: {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     default: "Danial Raza",
     template: "%s | Danial Raza",
   },
-}
+};
 
 export const viewport = {
   colorScheme: "dark light",
@@ -71,7 +71,7 @@ export const viewport = {
     },
   ],
   width: "device-width",
-}
+};
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
@@ -82,5 +82,5 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <SpeedInsights />
       </body>
     </html>
-  )
+  );
 }

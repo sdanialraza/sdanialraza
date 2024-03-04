@@ -1,10 +1,10 @@
-import type { PropsWithChildren, ReactNode } from "react"
+import type { PropsWithChildren, ReactNode } from "react";
 
 type Props = {
-  children: ReactNode
-  separator?: boolean
-  title: string
-}
+  children: ReactNode;
+  separator?: boolean;
+  title: string;
+};
 
 export default function Section({ children, separator, title }: Props) {
   return (
@@ -16,9 +16,9 @@ export default function Section({ children, separator, title }: Props) {
       </h1>
       {children}
     </section>
-  )
+  );
 }
 
 export function SubSection({ children }: PropsWithChildren) {
-  return <span className="w-full max-w-[600px] text-justify text-gray-700 dark:text-gray-300/90">{children}</span>
+  return <span className="w-full max-w-[600px] text-justify text-gray-700 dark:text-gray-300/90">{children}</span>;
 }

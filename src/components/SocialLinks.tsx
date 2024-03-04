@@ -1,15 +1,15 @@
-import { FaCode, FaDiscord, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
-import { MdEmail } from "react-icons/md"
-import type { ReactNode } from "react"
+import { FaCode, FaDiscord, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import type { ReactNode } from "react";
 
-import { REPOSITORY_LINK, SOCIAL_LINKS } from "@/util"
-import ExternalLink from "@/components/ExternalLink"
+import { REPOSITORY_LINK, SOCIAL_LINKS } from "@/util";
+import ExternalLink from "@/components/ExternalLink";
 
-const { Discord, Email, GitHub, Linkedin, Twitter } = SOCIAL_LINKS
+const { Discord, Email, GitHub, Linkedin, Twitter } = SOCIAL_LINKS;
 
 type Props = {
-  iconSize?: number
-}
+  iconSize?: number;
+};
 
 export default function SocialLinks({ iconSize = 20 }: Props) {
   return (
@@ -26,14 +26,14 @@ export default function SocialLinks({ iconSize = 20 }: Props) {
         <SocialLinkButton href={REPOSITORY_LINK} icon={<FaCode size={iconSize} />} title="Source Code" />
       </div>
     </section>
-  )
+  );
 }
 
 type SocialLinkButtonProps = {
-  href: string
-  icon: ReactNode
-  title: string
-}
+  href: string;
+  icon: ReactNode;
+  title: string;
+};
 
 export function SocialLinkButton({ href, icon, title }: SocialLinkButtonProps) {
   return (
@@ -44,5 +44,5 @@ export function SocialLinkButton({ href, icon, title }: SocialLinkButtonProps) {
     >
       {icon}
     </ExternalLink>
-  )
+  );
 }

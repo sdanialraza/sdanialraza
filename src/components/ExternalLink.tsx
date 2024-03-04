@@ -1,12 +1,12 @@
-import Link from "next/link"
-import type { ReactNode } from "react"
-import type { UrlObject } from "url"
+import Link from "next/link";
+import type { ReactNode } from "react";
+import type { UrlObject } from "url";
 
 interface Props {
-  className?: string
-  children: ReactNode
-  href: string | UrlObject
-  title?: string
+  className?: string;
+  children: ReactNode;
+  href: string | UrlObject;
+  title?: string;
 }
 
 export default function ExternalLink({ className, children, href, title }: Props) {
@@ -20,5 +20,5 @@ export default function ExternalLink({ className, children, href, title }: Props
     >
       {children}
     </Link>
-  )
+  );
 }

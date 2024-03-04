@@ -1,11 +1,11 @@
-import Image from "next/image"
+import Image from "next/image";
 
-import { calculateAge } from "@/util"
-import ExternalLink from "@/components/ExternalLink"
-import profilePicture from "../../public/logo.png"
-import Section, { SubSection } from "@/components/Section"
-import SocialLinks from "@/components/SocialLinks"
-import StatusPill from "@/components/StatusPill"
+import { calculateAge } from "@/util";
+import ExternalLink from "@/components/ExternalLink";
+import profilePicture from "../../public/logo.png";
+import Section, { SubSection } from "@/components/Section";
+import SocialLinks from "@/components/SocialLinks";
+import StatusPill from "@/components/StatusPill";
 
 export default function Home() {
   return (
@@ -69,5 +69,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  )
+  );
 }
