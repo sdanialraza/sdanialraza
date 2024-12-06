@@ -27,8 +27,8 @@ importers:
         specifier: ^5.4.0
         version: 5.4.0(react@18.3.1)
       react-use-lanyard:
-        specifier: ^0.3.1
-        version: 0.3.1(react@18.3.1)
+        specifier: ^0.3.2
+        version: 0.3.2(react@18.3.1)
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.6.0
@@ -1806,8 +1806,8 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react-use-lanyard@0.3.1:
-    resolution: {integrity: sha512-p8aT7txFa+hIHEdSnSr7ZwF2bL8E8Ei0RPQI2sMtOtoO0Xo51tPNMDwq80pNBAzfcaRRpRcg6wefv6hT70n7Nw==}
+  react-use-lanyard@0.3.2:
+    resolution: {integrity: sha512-aNxbABUL63jGRoFFCFWEvb5kSykomkdvbqKLvK/ey3awhErIw/DfAa0+RQtdPbXtgrp/vz3OBZMqYN2s+7vvaQ==}
     peerDependencies:
       react: '>=16'
 
@@ -3975,7 +3975,7 @@ snapshots:
 
   react-is@16.13.1: {}
 
-  react-use-lanyard@0.3.1(react@18.3.1):
+  react-use-lanyard@0.3.2(react@18.3.1):
     dependencies:
       react: 18.3.1
       swr: 2.2.5(react@18.3.1)
