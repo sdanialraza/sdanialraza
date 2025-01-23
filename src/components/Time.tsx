@@ -28,7 +28,7 @@ export default function Time() {
     <div className="flex gap-x-2">
       <HiOutlineClock size={20} title="My Local Time" />
       <span
-        className="cursor-pointer select-none underline underline-offset-2"
+        className="cursor-pointer underline underline-offset-2 select-none"
         onClick={toggleHour12}
         suppressHydrationWarning
         title={timeTitle}

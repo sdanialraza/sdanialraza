@@ -12,7 +12,7 @@ interface Props {
 export default function ExternalLink({ className, children, href, title }: Props) {
   return (
     <Link
-      className={className ?? "underline underline-offset-4 hover:text-pink"}
+      className={className ?? "underline underline-offset-4 hover:text-(--pink)"}
       href={href}
       rel="noopener noreferrer"
       target="_blank"

@@ -1,6 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --charcoal: #1c1b22;
+  --pink: #e4717a;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
