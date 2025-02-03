@@ -34,8 +34,8 @@ importers:
         specifier: ^19.6.1
         version: 19.6.1(@types/node@22.12.0)(typescript@5.7.3)
       '@commitlint/config-angular':
-        specifier: ^19.7.0
-        version: 19.7.0
+        specifier: ^19.7.1
+        version: 19.7.1
       '@tailwindcss/postcss':
         specifier: 4.0.1
         version: 4.0.1
@@ -100,8 +100,8 @@ packages:
     resolution: {integrity: sha512-4/6xrkElCSBb7+6oZXlBJ/zytkxXgmTg5gk1Voj3GAWShTivtWrPtDYvHmF858WhA695YKgxMHEPNN74UFkK8w==}
     engines: {node: '>=v18'}
 
-  '@commitlint/config-angular@19.7.0':
-    resolution: {integrity: sha512-xXBplZDC3yjnE1knGvO9ETqpxRhW0xZ/ud7KHPXGtvbcpmLX/tUIsbCmZcNvM9cZYMnYqAvhrQMEqCsjlkOA7A==}
+  '@commitlint/config-angular@19.7.1':
+    resolution: {integrity: sha512-aDXjejXfk1kqGDZOFAGu4lJ251WloR4duODaCcSuo/U/Nfnhnzq0VrhtGPCcOlTfVrWknumurg+ZcGe6v3e5ZA==}
     engines: {node: '>=v18'}
 
   '@commitlint/config-validator@19.5.0':
@@ -1970,9 +1970,6 @@ packages:
     peerDependencies:
       react: ^16.11.0 || ^17.0.0 || ^18.0.0
 
-  tailwindcss@4.0.0:
-    resolution: {integrity: sha512-ULRPI3A+e39T7pSaf1xoi58AqqJxVCLg8F/uM5A3FadUbnyDTgltVnXJvdkTjwCOGA6NazqHVcwPJC5h2vRYVQ==}
-
   tailwindcss@4.0.1:
     resolution: {integrity: sha512-UK5Biiit/e+r3i0O223bisoS5+y7ZT1PM8Ojn0MxRHzXN1VPZ2KY6Lo6fhu1dOfCfyUAlK7Lt6wSxowRabATBw==}
 
@@ -2135,7 +2132,7 @@ snapshots:
 
   '@commitlint/config-angular-type-enum@19.5.0': {}
 
-  '@commitlint/config-angular@19.7.0':
+  '@commitlint/config-angular@19.7.1':
     dependencies:
       '@commitlint/config-angular-type-enum': 19.5.0
 
@@ -4116,8 +4113,6 @@ snapshots:
       client-only: 0.0.1
       react: 18.3.1
       use-sync-external-store: 1.2.2(react@18.3.1)
-
-  tailwindcss@4.0.0: {}
 
   tailwindcss@4.0.1: {}
 
