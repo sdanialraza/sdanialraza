@@ -13,7 +13,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.4.1",
+    "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.1.0",
     "next": "15.1.6",
     "react": "18.3.1",
