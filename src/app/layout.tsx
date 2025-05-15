@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     ],
   },
   keywords: ["sdanialraza", "Danial Raza", "Danial", "Raza", "Website", "Portfolio", "Projects"],
-  manifest: "/site.manifest",
+  manifest: "/site.webmanifest",
   metadataBase: new URL(BASE_URL),
   openGraph: {
     description: "Personal website of Danial Raza.",
