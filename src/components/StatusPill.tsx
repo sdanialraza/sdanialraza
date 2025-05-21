@@ -1,8 +1,7 @@
 import type { LanyardResponse } from "react-use-lanyard";
-
-import { LANYARD_API_URL } from "@/util";
 import Status from "@/components/Status";
 import Time from "@/components/Time";
+import { LANYARD_API_URL } from "@/util";
 
 export default async function StatusPill() {
   const response = await fetch(LANYARD_API_URL, { cache: "no-store" });

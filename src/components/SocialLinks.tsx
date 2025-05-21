@@ -1,14 +1,13 @@
+import type { ReactNode } from "react";
 import { FaCode, FaDiscord, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import type { ReactNode } from "react";
-
-import { REPOSITORY_LINK, SOCIAL_LINKS } from "@/util";
 import ExternalLink from "@/components/ExternalLink";
+import { REPOSITORY_LINK, SOCIAL_LINKS } from "@/util";
 
 const { Discord, Email, GitHub, Linkedin, Twitter } = SOCIAL_LINKS;
 
 type Props = {
-  iconSize?: number;
+  readonly iconSize?: number;
 };
 
 export default function SocialLinks({ iconSize = 20 }: Props) {
@@ -30,9 +29,9 @@ export default function SocialLinks({ iconSize = 20 }: Props) {
 }
 
 type SocialLinkButtonProps = {
-  href: string;
-  icon: ReactNode;
-  title: string;
+  readonly href: string;
+  readonly icon: ReactNode;
+  readonly title: string;
 };
 
 export function SocialLinkButton({ href, icon, title }: SocialLinkButtonProps) {

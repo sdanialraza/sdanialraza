@@ -1,13 +1,13 @@
+import type { UrlObject } from "node:url";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import type { UrlObject } from "url";
 
-interface Props {
-  className?: string;
-  children: ReactNode;
-  href: string | UrlObject;
-  title?: string;
-}
+type Props = {
+  readonly children: ReactNode;
+  readonly className?: string;
+  readonly href: UrlObject | string;
+  readonly title?: string;
+};
 
 export default function ExternalLink({ className, children, href, title }: Props) {
   return (

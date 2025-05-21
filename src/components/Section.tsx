@@ -1,9 +1,9 @@
 import type { PropsWithChildren, ReactNode } from "react";
 
 type Props = {
-  children: ReactNode;
-  separator?: boolean;
-  title: string;
+  readonly children: ReactNode;
+  readonly separator?: boolean;
+  readonly title: string;
 };
 
 export default function Section({ children, separator, title }: Props) {

@@ -1,8 +1,7 @@
 "use client";
 
-import { HiOutlineClock } from "react-icons/hi";
 import { useEffect, useState } from "react";
-
+import { HiOutlineClock } from "react-icons/hi";
 import { TIME_FORMAT_OPTIONS } from "@/util";
 
 function convertDateToString(date: Date, hour12: boolean) {

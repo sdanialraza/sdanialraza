@@ -1,11 +1,10 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { BsSpotify } from "react-icons/bs";
 import { type LanyardData, useLanyard } from "react-use-lanyard";
-import type { ReactNode } from "react";
-
-import { DISCORD_USER_ID } from "@/util";
 import ExternalLink from "@/components/ExternalLink";
+import { DISCORD_USER_ID } from "@/util";
 
 const statusColors = {
   online: "bg-green-500",
@@ -22,7 +21,7 @@ const statusMappings = {
 } as const;
 
 type SpotifyStatusProps = {
-  data: LanyardData["spotify"];
+  readonly data: LanyardData["spotify"];
 };
 
 function SpotifyStatus({ data }: SpotifyStatusProps) {
@@ -48,8 +47,8 @@ function SpotifyStatus({ data }: SpotifyStatusProps) {
 }
 
 type Props = {
-  children: ReactNode;
-  initialData: LanyardData;
+  readonly children: ReactNode;
+  readonly initialData: LanyardData;
 };
 
 export default function Status({ children, initialData }: Props) {
