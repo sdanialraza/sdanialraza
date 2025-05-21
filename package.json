@@ -39,5 +39,13 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "4.1.7",
     "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "packageManager": "pnpm@9.15.9",
+  "volta": {
+    "node": "22.16.0",
+    "pnpm": "9.15.9"
   }
 }
