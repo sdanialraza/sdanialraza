@@ -8,7 +8,7 @@ export default async function StatusPill() {
   const { data }: LanyardResponse = await response.json();
 
   return (
-    <aside className="flex flex-col gap-2 text-sm font-semibold md:flex-row md:gap-y-0 dark:text-gray-400">
+    <aside className="mt-2 flex flex-col gap-2 text-sm font-semibold md:flex-row md:gap-y-0 dark:text-gray-400">
       <Status initialData={data}>
         <Time />
       </Status>
