@@ -10,3 +10,22 @@
     color-scheme: dark;
   }
 }
+
+#name span {
+  background: linear-gradient(45deg, red 0%, #e4717a 50%, red 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 7s linear infinite;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
