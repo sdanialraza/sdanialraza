@@ -31,7 +31,7 @@
     "@types/react-dom": "19.2.2",
     "babel-plugin-react-compiler": "19.1.0-rc.3",
     "eslint": "^8.57.0",
-    "eslint-config-neon": "^0.1.62",
+    "eslint-config-neon": "^0.2.9",
     "eslint-plugin-prettier": "^5.5.4",
     "husky": "^9.1.7",
     "is-ci": "^4.1.0",
