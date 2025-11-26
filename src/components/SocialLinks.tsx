@@ -12,7 +12,7 @@ type Props = {
 
 export default function SocialLinks({ iconSize = 20 }: Props) {
   return (
-    <section className="mt-4 flex w-full items-center justify-between">
+    <section className="mt-4 flex w-full flex-col items-center justify-between gap-2">
       <div className="flex justify-center space-x-2 self-start">
         <SocialLinkButton href={Discord} icon={<FaDiscord size={iconSize} />} title="Discord" />
         <SocialLinkButton href={Email} icon={<MdEmail size={iconSize} />} title="Email" />
@@ -20,8 +20,7 @@ export default function SocialLinks({ iconSize = 20 }: Props) {
         <SocialLinkButton href={Linkedin} icon={<FaLinkedin size={iconSize} />} title="LinkedIn" />
         <SocialLinkButton href={Twitter} icon={<FaTwitter size={iconSize} />} title="Twitter" />
       </div>
-
-      <div className="flex self-end">
+      <div className="flex justify-center space-x-2 self-start">
         <SocialLinkButton href={REPOSITORY_LINK} icon={<FaCode size={iconSize} />} title="Source Code" />
       </div>
     </section>
