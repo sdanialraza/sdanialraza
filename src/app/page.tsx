@@ -11,11 +11,11 @@ export default function Home() {
     <main className="flex h-full min-h-screen flex-col items-center">
       <div className="flex w-full grow content-stretch p-2 md:p-5">
         <div className="flex grow flex-col items-center justify-center space-y-8 overflow-hidden bg-fixed bg-center p-5 md:p-0">
-          <div className="flex w-full max-w-[600px] flex-col gap-y-3 rounded-lg">
+          <div className="flex w-full max-w-150 flex-col gap-y-3 rounded-lg">
             <div className="flex items-center gap-x-1">
               <Image
                 alt="Profile Picture"
-                className="h-[60px] w-[60px] rounded-full bg-cover md:h-[80px] md:w-[80px] lg:h-[100px] lg:w-[100px]"
+                className="h-15 w-15 rounded-full bg-cover md:h-20 md:w-20 lg:h-25 lg:w-25"
                 priority
                 src={profilePicture}
               />
