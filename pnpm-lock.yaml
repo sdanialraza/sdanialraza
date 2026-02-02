@@ -34,8 +34,8 @@ importers:
         specifier: ^20.3.1
         version: 20.3.1(@types/node@25.2.0)(typescript@5.9.3)
       '@commitlint/config-angular':
-        specifier: ^20.3.1
-        version: 20.3.1
+        specifier: ^20.4.0
+        version: 20.4.0
       '@eslint/eslintrc':
         specifier: ^3.3.3
         version: 3.3.3
@@ -212,8 +212,8 @@ packages:
     resolution: {integrity: sha512-6HAMnXyUl3EUBgECjvfLzlghbkMfZx28YBPDry3pPWR0+xpzqSbUY19VIkmdetqYKeawFViudvkqD4VH93gKKg==}
     engines: {node: '>=v18'}
 
-  '@commitlint/config-angular@20.3.1':
-    resolution: {integrity: sha512-aSChDBSwGfTa68AK9RgZl9K5rAV3qC8/XfHJAODaDuuMJ/99V7yMVlg0C/EHEiD3O0KC74nEbjvxmtAjYelPTA==}
+  '@commitlint/config-angular@20.4.0':
+    resolution: {integrity: sha512-y+xrKFQNJtE9Sfx8I3MNOaNQj3gyO52WtqXIB+ZC/lqjCefKe1GCJzEARWHkmkFkFJPYk0sgyjRHbdQQe2xMYw==}
     engines: {node: '>=v18'}
 
   '@commitlint/config-validator@20.3.1':
@@ -3811,7 +3811,7 @@ snapshots:
 
   '@commitlint/config-angular-type-enum@20.0.0': {}
 
-  '@commitlint/config-angular@20.3.1':
+  '@commitlint/config-angular@20.4.0':
     dependencies:
       '@commitlint/config-angular-type-enum': 20.0.0
 
