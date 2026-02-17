@@ -10,7 +10,7 @@ import pluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
 const config = [
   {
-    ignores: ["ecosystem.config.cjs", "eslint.config.js", "node_modules/**", "dist/**"],
+    ignores: ["eslint.config.mjs", "node_modules/**", "dist/**"],
   },
   ...common,
   ...browser,
@@ -27,6 +27,11 @@ const config = [
     },
     rules: {
       "react-refresh/only-export-components": "off",
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
     },
   },
   ...prettier,
