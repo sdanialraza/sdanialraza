@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.1",
-    "@commitlint/config-angular": "^20.4.1",
+    "@commitlint/config-angular": "^20.4.2",
     "@eslint/eslintrc": "^3.3.3",
     "@tailwindcss/postcss": "4.2.0",
     "@types/node": "25.3.0",
