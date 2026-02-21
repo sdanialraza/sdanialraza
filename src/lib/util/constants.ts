@@ -21,6 +21,8 @@ export const LANYARD_OFFLINE_FALLBACK: LanyardData = {
     username: "",
   },
   kv: {},
+  listening_to_spotify: false,
+  spotify: null,
 };
 
 export const LANYARD_WS_URL = "wss://api.lanyard.rest/socket";

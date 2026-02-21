@@ -1,5 +1,14 @@
 export type DiscordStatus = "dnd" | "idle" | "offline" | "online";
 
+export interface SpotifyData {
+  album: string;
+  album_art_url: string;
+  artist: string;
+  song: string;
+  timestamps: { end: number; start: number };
+  track_id: string;
+}
+
 export interface LanyardData {
   active_on_discord_desktop: boolean;
   active_on_discord_mobile: boolean;
@@ -15,6 +24,8 @@ export interface LanyardData {
     username: string;
   };
   kv: Record<string, string>;
+  listening_to_spotify: boolean;
+  spotify: SpotifyData | null;
 }
 
 export interface LanyardResponse {
