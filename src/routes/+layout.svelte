@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { untrack } from "svelte";
+  import { untrack, type Snippet } from "svelte";
   import { SvelteTheme } from "svelte-themes";
   import "../app.css";
   import { createLanyardSocket, setLanyardContext } from "$lib/context/lanyard.svelte";
   import type { LayoutData } from "./$types";
 
-  let { children, data }: { children: import("svelte").Snippet; data: LayoutData } = $props();
+  let { children, data }: { children: Snippet; data: LayoutData } = $props();
 
   let lanyardData = $state(untrack(() => data.lanyard));
 
