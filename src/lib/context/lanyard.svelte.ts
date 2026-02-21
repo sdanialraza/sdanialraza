@@ -1,23 +1,29 @@
 import { getContext, setContext } from "svelte";
 import type { LanyardData, LanyardWebSocketMessage } from "$lib/types/lanyard";
-import { DISCORD_USER_ID, LANYARD_OFFLINE_FALLBACK, LANYARD_WS_URL } from "$lib/util";
+import { DISCORD_USER_ID, LANYARD_WS_URL } from "$lib/util";
 
-const LANYARD_CONTEXT_KEY = Symbol("lanyard");
+export const LANYARD_CONTEXT_KEY = Symbol("lanyard");
 
-interface LanyardContext {
+export interface LanyardContext {
   readonly data: LanyardData;
-  connect(): void;
-  destroy(): void;
 }
 
-export function setLanyardContext(initialData: LanyardData | null): LanyardContext {
-  const state = $state({ data: initialData ?? LANYARD_OFFLINE_FALLBACK });
+export function getLanyardContext(): LanyardContext {
+  return getContext<LanyardContext>(LANYARD_CONTEXT_KEY);
+}
+
+export function setLanyardContext(context: LanyardContext): void {
+  setContext(LANYARD_CONTEXT_KEY, context);
+}
+
+export function createLanyardSocket(onUpdate: (data: LanyardData) => void) {
   let ws: WebSocket | null = null;
   let heartbeatInterval: ReturnType<typeof setInterval> | null = null;
   let reconnectTimeout: ReturnType<typeof setTimeout> | null = null;
+  let destroyed = false;
 
   function connect() {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || destroyed) return;
 
     ws = new WebSocket(LANYARD_WS_URL);
 
@@ -37,7 +43,7 @@ export function setLanyardContext(initialData: LanyardData | null): LanyardConte
         }
 
         case 0: {
-          state.data = message.d as LanyardData;
+          onUpdate(message.d as LanyardData);
           break;
         }
       }
@@ -49,7 +55,9 @@ export function setLanyardContext(initialData: LanyardData | null): LanyardConte
         heartbeatInterval = null;
       }
 
-      reconnectTimeout = setTimeout(connect, 5_000);
+      if (!destroyed) {
+        reconnectTimeout = setTimeout(connect, 5_000);
+      }
     };
 
     ws.onerror = () => {
@@ -58,6 +66,8 @@ export function setLanyardContext(initialData: LanyardData | null): LanyardConte
   }
 
   function destroy() {
+    destroyed = true;
+
     if (heartbeatInterval) {
       clearInterval(heartbeatInterval);
       heartbeatInterval = null;
@@ -72,19 +82,5 @@ export function setLanyardContext(initialData: LanyardData | null): LanyardConte
     ws = null;
   }
 
-  const context: LanyardContext = {
-    get data() {
-      return state.data;
-    },
-    connect,
-    destroy,
-  };
-
-  setContext(LANYARD_CONTEXT_KEY, context);
-
-  return context;
-}
-
-export function getLanyardContext(): LanyardContext {
-  return getContext<LanyardContext>(LANYARD_CONTEXT_KEY);
+  return { connect, destroy };
 }

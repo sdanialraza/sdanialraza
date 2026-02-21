@@ -1,16 +1,27 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { untrack } from "svelte";
+  import { SvelteTheme } from "svelte-themes";
   import "../app.css";
-  import { setLanyardContext } from "$lib/context/lanyard.svelte";
+  import { createLanyardSocket, setLanyardContext } from "$lib/context/lanyard.svelte";
+  import type { LayoutData } from "./$types";
 
-  let { data, children } = $props();
+  let { children, data }: { children: import("svelte").Snippet; data: LayoutData } = $props();
 
-  const lanyard = setLanyardContext(data.lanyard);
+  let lanyardData = $state(untrack(() => data.lanyard));
 
-  onMount(() => {
-    lanyard.connect();
-    return () => lanyard.destroy();
+  setLanyardContext({
+    get data() {
+      return lanyardData;
+    },
   });
+
+  const { connect, destroy } = createLanyardSocket(incoming => {
+    lanyardData = incoming;
+  });
+
+  connect();
+
+  $effect(() => () => destroy());
 </script>
 
 <svelte:head>
@@ -34,8 +45,10 @@
   <meta name="twitter:image" content="/logo.png" />
 </svelte:head>
 
-<div
-  class="bg-white bg-linear-to-br text-black dark:bg-black dark:from-black dark:via-(--charcoal) dark:to-black dark:text-white"
->
-  {@render children()}
-</div>
+<SvelteTheme attribute="class">
+  <div
+    class="bg-stone-100 text-black dark:bg-black dark:bg-linear-to-br dark:from-black dark:via-(--charcoal) dark:to-black dark:text-white"
+  >
+    {@render children()}
+  </div>
+</SvelteTheme>

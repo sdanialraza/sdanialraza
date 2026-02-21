@@ -9,7 +9,7 @@
 
   let { children }: Props = $props();
 
-  const statusColors: Record<string, string> = {
+  const statusColors: Record<DiscordStatus, string> = {
     online: "bg-green-500",
     idle: "bg-yellow-500",
     dnd: "bg-red-500",
@@ -26,8 +26,8 @@
   const lanyard = getLanyardContext();
 
   let discordStatus = $derived(lanyard.data.discord_status);
-  let color = $derived(statusColors[discordStatus] ?? "bg-gray-500");
-  let status = $derived(statusMappings[discordStatus] ?? "Offline");
+  let color = $derived(statusColors[discordStatus]);
+  let status = $derived(statusMappings[discordStatus]);
 </script>
 
 <aside class="flex items-center gap-x-2 text-sm font-semibold dark:text-gray-400">

@@ -1,19 +1,7 @@
 @import "tailwindcss";
 
-@layer base {
-  *,
-  *::before,
-  *::after {
-    transition:
-      background-color 250ms ease-in-out,
-      border-color 250ms ease-in-out,
-      color 250ms ease-in-out;
-  }
-}
-
 @theme {
   --charcoal: #1c1b22;
-  --pink: #e4717a;
 }
 
 @variant dark (&:where(.dark, .dark *));

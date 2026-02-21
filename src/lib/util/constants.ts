@@ -28,7 +28,7 @@ export const LANYARD_WS_URL = "wss://api.lanyard.rest/socket";
 export const REPOSITORY_LINK = "https://github.com/sdanialraza/sdanialraza";
 
 export const SOCIAL_LINKS = {
-  Discord: `https://discordapp.com/users/${DISCORD_USER_ID}`,
+  Discord: `https://discord.com/users/${DISCORD_USER_ID}`,
   Email: "mailto:danialrazafb@gmail.com",
   GitHub: "https://github.com/sdanialraza",
   Linkedin: "https://www.linkedin.com/in/sdanialraza",

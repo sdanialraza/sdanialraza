@@ -1,47 +1,33 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import { Icon } from "svelte-icons-pack";
-  import { LuSun, LuMoon } from "svelte-icons-pack/lu";
+  import { useTheme } from "svelte-themes";
+  import LuSun from "~icons/lucide/sun";
+  import LuMoon from "~icons/lucide/moon";
 
-  type Theme = "light" | "dark";
+  const theme = useTheme();
 
-  let theme = $state<Theme>("dark");
-  let mounted = $state(false);
+  const toggleTheme = () => {
+    theme.theme = theme.resolvedTheme === "dark" ? "light" : "dark";
+  };
 
-  function toggleTheme() {
-    const newTheme: Theme = theme === "light" ? "dark" : "light";
-    theme = newTheme;
-    localStorage.setItem("theme", newTheme);
-    applyTheme(newTheme);
-  }
-
-  function applyTheme(newTheme: Theme) {
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
+  const handleClick = () => {
+    if (typeof document.startViewTransition === "function") {
+      document.startViewTransition(toggleTheme);
     } else {
-      document.documentElement.classList.remove("dark");
+      toggleTheme();
     }
-  }
-
-  onMount(() => {
-    const saved = localStorage.getItem("theme") as Theme | null;
-
-    theme = saved ? saved : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-
-    applyTheme(theme);
-
-    mounted = true;
-  });
+  };
 </script>
 
-{#if mounted}
-  <button
-    aria-label="Toggle theme"
-    class="flex items-center gap-x-2 rounded-xl bg-gray-200/60 p-2 font-semibold dark:bg-white/10"
-    onclick={toggleTheme}
-    title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-    type="button"
-  >
-    <Icon color="var(--icon-color)" size="20" src={theme === "light" ? LuMoon : LuSun} />
-  </button>
-{/if}
+<button
+  aria-label="Toggle theme"
+  class="flex items-center gap-x-2 rounded-xl bg-gray-200/60 p-2 font-semibold dark:bg-white/10"
+  onclick={handleClick}
+  title={`Switch to ${theme.resolvedTheme === "light" ? "dark" : "light"} mode`}
+  type="button"
+>
+  {#if theme.resolvedTheme === "light"}
+    <LuMoon class="size-5 text-(--icon-color)" />
+  {:else}
+    <LuSun class="size-5 text-(--icon-color)" />
+  {/if}
+</button>

@@ -1,8 +1,6 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import { Icon } from "svelte-icons-pack";
-  import { LuClock } from "svelte-icons-pack/lu";
-  import { Temporal } from "@js-temporal/polyfill";
+  import { Temporal } from "temporal-polyfill";
+  import LuClock from "~icons/lucide/clock";
 
   const TIME_ZONE = "Europe/Madrid";
 
@@ -15,21 +13,13 @@
   }
 
   let hour12 = $state(false);
-  let time = $state("");
-  let mounted = $state(false);
+  let time = $state(getCurrentTime(false));
 
   function toggleHour12() {
     hour12 = !hour12;
   }
 
-  onMount(() => {
-    mounted = true;
-    time = getCurrentTime(hour12);
-  });
-
   $effect(() => {
-    if (!mounted) return;
-
     time = getCurrentTime(hour12);
     const interval = setInterval(() => {
       time = getCurrentTime(hour12);
@@ -42,17 +32,13 @@
 </script>
 
 <div class="flex gap-x-2">
-  <Icon src={LuClock} size="20" color="var(--icon-color)" title="My Local Time" />
-  {#if mounted}
-    <button
-      class="cursor-pointer underline underline-offset-2 select-none"
-      onclick={toggleHour12}
-      title={timeTitle}
-      type="button"
-    >
-      {time}
-    </button>
-  {:else}
-    <span class="underline underline-offset-2 select-none">&nbsp;</span>
-  {/if}
+  <LuClock class="size-5 text-(--icon-color)" />
+  <button
+    class="cursor-pointer underline underline-offset-2 select-none"
+    onclick={toggleHour12}
+    title={timeTitle}
+    type="button"
+  >
+    {time}
+  </button>
 </div>
