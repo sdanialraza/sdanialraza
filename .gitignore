@@ -4,10 +4,8 @@
 # idea
 .idea
 
-# next.js
-/.next/
-/out/
-next-env.d.ts
+# sveltekit
+/.svelte-kit/
 
 # production
 /build
