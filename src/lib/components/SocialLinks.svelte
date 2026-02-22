@@ -55,13 +55,12 @@
   </div>
   <div class="mx-3 h-5 w-px rounded-full bg-black/20 dark:bg-white/20"></div>
   <a
-    class="flex items-center gap-x-2 rounded-xl bg-gray-200/60 p-2 font-semibold underline underline-offset-4 dark:bg-white/10"
+    class="mr-2 flex items-center gap-x-2 rounded-xl bg-gray-200/60 p-2 font-semibold underline underline-offset-4 dark:bg-white/10"
     href={REPOSITORY_LINK}
     target="_blank"
     title="Source Code"
   >
     <FaSolidCode class="size-5 text-(--icon-color)" />
   </a>
-  <div class="mx-3 h-5 w-px rounded-full bg-black/20 dark:bg-white/20"></div>
   <ThemeToggle />
 </section>
