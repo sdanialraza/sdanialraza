@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Activity from "$lib/components/Activity.svelte";
   import SocialLinks from "$lib/components/SocialLinks.svelte";
   import Spotify from "$lib/components/Spotify.svelte";
   import Status from "$lib/components/Status.svelte";
@@ -24,6 +25,7 @@
       </Status>
       <h1 class="text-3xl font-bold">Danial Raza</h1>
       <Spotify />
+      <Activity />
       <p class="mt-2 text-sm text-gray-800 dark:text-gray-400">A {calculateAge()}-year-old software developer</p>
       <SocialLinks />
     </section>
