@@ -1,8 +1,8 @@
 <script lang="ts">
   import LuGamepad2 from "~icons/lucide/gamepad-2";
+  import { Temporal } from "temporal-polyfill";
   import { getLanyardContext } from "$lib/context/lanyard.svelte";
   import { resolveActivityAssetUrl } from "$lib/util";
-  import { Temporal } from "temporal-polyfill";
 
   const lanyard = getLanyardContext();
 
@@ -14,6 +14,7 @@
 
   $effect(() => {
     const start = activity?.timestamps?.start;
+
     if (!start) {
       elapsed = "";
 
@@ -30,7 +31,9 @@
     };
 
     update();
+
     const interval = setInterval(update, 1_000);
+
     return () => clearInterval(interval);
   });
 </script>

@@ -1,8 +1,8 @@
 <script lang="ts">
   import { untrack, type Snippet } from "svelte";
   import { SvelteTheme } from "svelte-themes";
-  import "../app.css";
   import { createLanyardSocket, setLanyardContext } from "$lib/context/lanyard.svelte";
+  import "../app.css";
   import type { LayoutData } from "./$types";
 
   let { children, data }: { children: Snippet; data: LayoutData } = $props();
@@ -15,9 +15,7 @@
     },
   });
 
-  const { connect, destroy } = createLanyardSocket(incoming => {
-    lanyardData = incoming;
-  });
+  const { connect, destroy } = createLanyardSocket(incoming => (lanyardData = incoming));
 
   connect();
 

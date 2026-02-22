@@ -27,7 +27,7 @@ export function createLanyardSocket(onUpdate: (data: LanyardData) => void) {
 
     ws = new WebSocket(LANYARD_WS_URL);
 
-    ws.onmessage = (event: MessageEvent) => {
+    ws.addEventListener("message", event => {
       const message: LanyardWebSocketMessage = JSON.parse(event.data);
 
       switch (message.op) {
@@ -35,10 +35,10 @@ export function createLanyardSocket(onUpdate: (data: LanyardData) => void) {
           const { heartbeat_interval } = message.d as { heartbeat_interval: number };
 
           heartbeatInterval = setInterval(() => {
-            ws?.send(JSON.stringify({ op: 3 }));
+            ws!.send(JSON.stringify({ op: 3 }));
           }, heartbeat_interval);
 
-          ws?.send(JSON.stringify({ d: { subscribe_to_id: DISCORD_USER_ID }, op: 2 }));
+          ws!.send(JSON.stringify({ d: { subscribe_to_id: DISCORD_USER_ID }, op: 2 }));
           break;
         }
 
@@ -47,22 +47,21 @@ export function createLanyardSocket(onUpdate: (data: LanyardData) => void) {
           break;
         }
       }
-    };
+    });
 
-    ws.onclose = () => {
+    ws.addEventListener("close", () => {
       if (heartbeatInterval) {
         clearInterval(heartbeatInterval);
+
         heartbeatInterval = null;
       }
 
       if (!destroyed) {
         reconnectTimeout = setTimeout(connect, 5_000);
       }
-    };
+    });
 
-    ws.onerror = () => {
-      ws?.close();
-    };
+    ws.addEventListener("error", () => ws!.close());
   }
 
   function destroy() {

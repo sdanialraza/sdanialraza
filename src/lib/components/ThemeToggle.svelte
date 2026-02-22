@@ -5,9 +5,7 @@
 
   const theme = useTheme();
 
-  const toggleTheme = () => {
-    theme.theme = theme.resolvedTheme === "dark" ? "light" : "dark";
-  };
+  const toggleTheme = () => (theme.theme = theme.resolvedTheme === "dark" ? "light" : "dark");
 
   const handleClick = () => {
     if (typeof document.startViewTransition === "function") {

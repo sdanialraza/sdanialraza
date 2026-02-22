@@ -1,6 +1,20 @@
-import type { LanyardData } from "$lib/types/lanyard";
+import type { DiscordStatus, LanyardData } from "$lib/types/lanyard";
 
 export const DATE_OF_BIRTH = new Date("2003-10-18");
+
+export const DISCORD_STATUS_COLORS = {
+  online: "bg-green-500",
+  idle: "bg-yellow-500",
+  dnd: "bg-red-500",
+  offline: "bg-gray-500",
+};
+
+export const DISCORD_STATUS_MAPPINGS = {
+  online: "Online",
+  idle: "Idle",
+  dnd: "Do Not Disturb",
+  offline: "Offline",
+} as const satisfies Record<DiscordStatus, string>;
 
 export const DISCORD_USER_ID = "274615157496348674";
 

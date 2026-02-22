@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import type { DiscordStatus } from "$lib/types/lanyard";
+  import { DISCORD_STATUS_COLORS, DISCORD_STATUS_MAPPINGS } from "$lib/util";
   import { getLanyardContext } from "$lib/context/lanyard.svelte";
 
   interface Props {
@@ -9,25 +9,11 @@
 
   let { children }: Props = $props();
 
-  const statusColors: Record<DiscordStatus, string> = {
-    online: "bg-green-500",
-    idle: "bg-yellow-500",
-    dnd: "bg-red-500",
-    offline: "bg-gray-500",
-  };
-
-  const statusMappings: Record<DiscordStatus, string> = {
-    online: "Online",
-    idle: "Idle",
-    dnd: "Do Not Disturb",
-    offline: "Offline",
-  };
-
   const lanyard = getLanyardContext();
 
   let discordStatus = $derived(lanyard.data.discord_status);
-  let color = $derived(statusColors[discordStatus]);
-  let status = $derived(statusMappings[discordStatus]);
+  let color = $derived(DISCORD_STATUS_COLORS[discordStatus]);
+  let status = $derived(DISCORD_STATUS_MAPPINGS[discordStatus]);
 </script>
 
 <aside class="flex items-center gap-x-2 text-sm font-semibold dark:text-gray-400">

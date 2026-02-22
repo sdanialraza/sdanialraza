@@ -6,7 +6,6 @@
 
   let spotify = $derived(lanyard.data.spotify);
   let listening = $derived(lanyard.data.listening_to_spotify);
-  let spotifyUrl = $derived(spotify ? `https://open.spotify.com/track/${spotify.track_id}` : "");
 </script>
 
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
@@ -15,7 +14,7 @@
     <BrandsSpotify class="size-4 shrink-0 text-green-500" />
     <a
       class="min-w-0 truncate font-medium underline underline-offset-2 transition-colors hover:text-black dark:hover:text-white"
-      href={spotifyUrl}
+      href="https://open.spotify.com/track/{spotify.track_id}"
       target="_blank"
       title="{spotify.song} by {spotify.artist} — {spotify.album}"
     >
