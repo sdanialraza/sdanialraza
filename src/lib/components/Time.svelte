@@ -5,30 +5,29 @@
   const TIME_ZONE = "Europe/Madrid";
 
   function getCurrentTime(hour12: boolean): string {
-    return Temporal.Now.plainTimeISO(TIME_ZONE).toLocaleString("en-US", {
-      hour: "numeric",
-      minute: "numeric",
-      hour12,
-    });
+    return Temporal.Now.zonedDateTimeISO(TIME_ZONE)
+      .toLocaleString("en-ES", {
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        timeZoneName: "short",
+        hour12,
+      })
+      .toUpperCase();
   }
 
   let hour12 = $state(false);
   let time = $state(getCurrentTime(false));
 
-  function toggleHour12() {
-    hour12 = !hour12;
-  }
+  const toggleHour12 = () => (hour12 = !hour12);
 
   $effect(() => {
     time = getCurrentTime(hour12);
-    const interval = setInterval(() => {
-      time = getCurrentTime(hour12);
-    }, 5_000);
+
+    const interval = setInterval(() => (time = getCurrentTime(hour12)), 1_000);
 
     return () => clearInterval(interval);
   });
-
-  let timeTitle = $derived(`Switch to ${hour12 ? "24" : "12"}-hour format`);
 </script>
 
 <div class="flex gap-x-2">
@@ -36,7 +35,7 @@
   <button
     class="cursor-pointer underline underline-offset-2 select-none"
     onclick={toggleHour12}
-    title={timeTitle}
+    title="Switch to {hour12 ? '24' : '12'}-hour format"
     type="button"
   >
     {time}
