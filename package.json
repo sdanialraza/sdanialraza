@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "svelte-themes": "^2.0.10",
-    "temporal-polyfill": "^0.3.0"
+    "temporal-polyfill": "^0.3.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.3",
