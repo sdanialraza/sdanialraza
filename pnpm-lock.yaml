@@ -19,8 +19,8 @@ importers:
         specifier: ^20.5.0
         version: 20.5.0(@types/node@25.5.0)(conventional-commits-parser@6.3.0)(typescript@5.9.3)
       '@commitlint/config-angular':
-        specifier: ^20.4.4
-        version: 20.4.4
+        specifier: ^20.5.0
+        version: 20.5.0
       '@iconify-json/fa6-brands':
         specifier: ^1.2.6
         version: 1.2.6
@@ -162,8 +162,8 @@ packages:
     resolution: {integrity: sha512-6HAMnXyUl3EUBgECjvfLzlghbkMfZx28YBPDry3pPWR0+xpzqSbUY19VIkmdetqYKeawFViudvkqD4VH93gKKg==}
     engines: {node: '>=v18'}
 
-  '@commitlint/config-angular@20.4.4':
-    resolution: {integrity: sha512-sXxTQLw86nambAh5Wno0fNpfAPDwJ+HkfPUvZ87MCORe0sfEZlYXVZD47hpUl46xrU+kpfJl/JAIrcPTSauwyQ==}
+  '@commitlint/config-angular@20.5.0':
+    resolution: {integrity: sha512-AZ8foxHb8VBCpZywnIFxpXgrK6VMizZ957vlz8UEyaMZEzvP0F+RtQmTijHnVPaPVk/scS6EDp0/1sy1UszXoQ==}
     engines: {node: '>=v18'}
 
   '@commitlint/config-validator@20.5.0':
@@ -2170,7 +2170,7 @@ snapshots:
 
   '@commitlint/config-angular-type-enum@20.0.0': {}
 
-  '@commitlint/config-angular@20.4.4':
+  '@commitlint/config-angular@20.5.0':
     dependencies:
       '@commitlint/config-angular-type-enum': 20.0.0
 
