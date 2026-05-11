@@ -19,8 +19,8 @@ importers:
         specifier: ^20.5.3
         version: 20.5.3(@types/node@25.6.2)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
       '@commitlint/config-angular':
-        specifier: ^20.5.3
-        version: 20.5.3
+        specifier: ^21.0.0
+        version: 21.0.0
       '@iconify-json/fa6-brands':
         specifier: ^1.2.6
         version: 1.2.6
@@ -158,13 +158,13 @@ packages:
     engines: {node: '>=v18'}
     hasBin: true
 
-  '@commitlint/config-angular-type-enum@20.0.0':
-    resolution: {integrity: sha512-6HAMnXyUl3EUBgECjvfLzlghbkMfZx28YBPDry3pPWR0+xpzqSbUY19VIkmdetqYKeawFViudvkqD4VH93gKKg==}
-    engines: {node: '>=v18'}
+  '@commitlint/config-angular-type-enum@21.0.0':
+    resolution: {integrity: sha512-+v59ZisdLGTdQCiDp3NIFWvoeR4ZLsRR1k8B5Q+kRp29JCgm50ckDcyskT51xQhAuQo0wA+R90S8QpMzB/dVsQ==}
+    engines: {node: '>=22.12.0'}
 
-  '@commitlint/config-angular@20.5.3':
-    resolution: {integrity: sha512-j0TTWt4EKyC15cKZi4ebYlzKsbcaGUKfZ8FLEDaaSiGhXY0sCoqMu9K3NPYRB/qQuygduLjEnWKE3X028JP+Gw==}
-    engines: {node: '>=v18'}
+  '@commitlint/config-angular@21.0.0':
+    resolution: {integrity: sha512-86VyCqEG0oMBqJo6RCTN18c7nguDcBLVRgRlwyzq4n7MTK9IbbupOM7k6BeD20Ju4sGS8eM+cw8pIfssSGcEkg==}
+    engines: {node: '>=22.12.0'}
 
   '@commitlint/config-validator@20.5.0':
     resolution: {integrity: sha512-T/Uh6iJUzyx7j35GmHWdIiGRQB+ouZDk0pwAaYq4SXgB54KZhFdJ0vYmxiW6AMYICTIWuyMxDBl1jK74oFp/Gw==}
@@ -2334,11 +2334,11 @@ snapshots:
       - conventional-commits-parser
       - typescript
 
-  '@commitlint/config-angular-type-enum@20.0.0': {}
+  '@commitlint/config-angular-type-enum@21.0.0': {}
 
-  '@commitlint/config-angular@20.5.3':
+  '@commitlint/config-angular@21.0.0':
     dependencies:
-      '@commitlint/config-angular-type-enum': 20.0.0
+      '@commitlint/config-angular-type-enum': 21.0.0
 
   '@commitlint/config-validator@20.5.0':
     dependencies:
