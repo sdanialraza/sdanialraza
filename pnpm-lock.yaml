@@ -32,10 +32,10 @@ importers:
         version: 1.2.111
       '@sveltejs/adapter-cloudflare':
         specifier: ^7.2.8
-        version: 7.2.8(@sveltejs/kit@2.63.1(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(svelte@5.56.3(@typescript-eslint/types@8.60.1))(typescript@6.0.3)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(wrangler@4.67.0(@cloudflare/workers-types@4.20260227.0))
+        version: 7.2.8(@sveltejs/kit@2.64.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(svelte@5.56.3(@typescript-eslint/types@8.60.1))(typescript@6.0.3)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(wrangler@4.67.0(@cloudflare/workers-types@4.20260227.0))
       '@sveltejs/kit':
-        specifier: ^2.63.1
-        version: 2.63.1(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(svelte@5.56.3(@typescript-eslint/types@8.60.1))(typescript@6.0.3)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2))
+        specifier: ^2.64.0
+        version: 2.64.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(svelte@5.56.3(@typescript-eslint/types@8.60.1))(typescript@6.0.3)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^6.2.4
         version: 6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2))
@@ -977,8 +977,8 @@ packages:
       '@sveltejs/kit': ^2.0.0
       wrangler: ^4.0.0
 
-  '@sveltejs/kit@2.63.1':
-    resolution: {integrity: sha512-bL8ch7WDjJTRMjViXZAN3luH6O8gk3RoCaBB8yacNKCRdzGCHlryGpGk/Hpm/STXN0ls9/NJ+VrrxP3m/S2bIg==}
+  '@sveltejs/kit@2.64.0':
+    resolution: {integrity: sha512-24MXA/xyugUqJd09DD4v4bLd4k7FaYhdBck/pTXiu3XFtDBcwXYpJc1SO1+lqdjkNBUo1r4eek5FS7cfzBQUmA==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -1984,8 +1984,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  semver@7.8.2:
-    resolution: {integrity: sha512-c8jsqUZm3omBOI66G90z1Dyw5z622G8oLG+omfsHBJf3CWQTlOcwOjvOG6wtiNfW6anKm/eA39LMwMtMez2TiQ==}
+  semver@7.8.3:
+    resolution: {integrity: sha512-wnilbGyMxzbY7dNOl7jpKbLSjcfeweJWU5j4+u5qW+6/wuGD9KzIGOyZnQVSBM9E7DtWaaH3CyHkppYrKYoxwg==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2892,14 +2892,14 @@ snapshots:
     dependencies:
       acorn: 8.16.0
 
-  '@sveltejs/adapter-cloudflare@7.2.8(@sveltejs/kit@2.63.1(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(svelte@5.56.3(@typescript-eslint/types@8.60.1))(typescript@6.0.3)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(wrangler@4.67.0(@cloudflare/workers-types@4.20260227.0))':
+  '@sveltejs/adapter-cloudflare@7.2.8(@sveltejs/kit@2.64.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(svelte@5.56.3(@typescript-eslint/types@8.60.1))(typescript@6.0.3)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(wrangler@4.67.0(@cloudflare/workers-types@4.20260227.0))':
     dependencies:
       '@cloudflare/workers-types': 4.20260227.0
-      '@sveltejs/kit': 2.63.1(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(svelte@5.56.3(@typescript-eslint/types@8.60.1))(typescript@6.0.3)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2))
+      '@sveltejs/kit': 2.64.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(svelte@5.56.3(@typescript-eslint/types@8.60.1))(typescript@6.0.3)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2))
       worktop: 0.8.0-next.18
       wrangler: 4.67.0(@cloudflare/workers-types@4.20260227.0)
 
-  '@sveltejs/kit@2.63.1(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(svelte@5.56.3(@typescript-eslint/types@8.60.1))(typescript@6.0.3)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2))':
+  '@sveltejs/kit@2.64.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.56.3(@typescript-eslint/types@8.60.1))(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2)))(svelte@5.56.3(@typescript-eslint/types@8.60.1))(typescript@6.0.3)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.8.2))':
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@sveltejs/acorn-typescript': 1.0.10(acorn@8.16.0)
@@ -3824,7 +3824,7 @@ snapshots:
 
   semver@7.8.1: {}
 
-  semver@7.8.2: {}
+  semver@7.8.3: {}
 
   set-cookie-parser@3.1.0: {}
 
@@ -3832,7 +3832,7 @@ snapshots:
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
-      semver: 7.8.2
+      semver: 7.8.3
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.34.5
       '@img/sharp-darwin-x64': 0.34.5
