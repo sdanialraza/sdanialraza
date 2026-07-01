@@ -20,7 +20,7 @@
     "temporal-polyfill": "^1.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.1.0",
+    "@commitlint/cli": "^21.2.0",
     "@commitlint/config-angular": "^21.2.0",
     "@iconify-json/fa6-brands": "^1.2.6",
     "@iconify-json/fa6-solid": "^1.2.4",
