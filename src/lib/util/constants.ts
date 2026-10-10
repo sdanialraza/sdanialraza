@@ -1,4 +1,4 @@
-import type { DiscordStatus, LanyardData } from "$lib/types/lanyard";
+import type { DiscordStatus, LanyardData } from "#lib/types/lanyard.ts";
 
 export const DATE_OF_BIRTH = new Date("2003-10-18");
 

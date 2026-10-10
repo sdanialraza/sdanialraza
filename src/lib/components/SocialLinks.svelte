@@ -5,8 +5,8 @@
   import FaBrandsTwitter from "~icons/fa6-brands/twitter";
   import FaSolidCode from "~icons/fa6-solid/code";
   import LuMail from "~icons/lucide/mail";
-  import ThemeToggle from "$lib/components/ThemeToggle.svelte";
-  import { REPOSITORY_LINK, SOCIAL_LINKS } from "$lib/util";
+  import ThemeToggle from "#lib/components/ThemeToggle.svelte";
+  import { REPOSITORY_LINK, SOCIAL_LINKS } from "#lib/util/index.ts";
 </script>
 
 <!-- eslint-disable svelte/no-navigation-without-resolve -->

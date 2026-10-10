@@ -1,6 +1,6 @@
 <script lang="ts">
   import BrandsSpotify from "~icons/fa6-brands/spotify";
-  import { getLanyardContext } from "$lib/context/lanyard.svelte";
+  import { getLanyardContext } from "#lib/context/lanyard.svelte.ts";
 
   const lanyard = getLanyardContext();
 

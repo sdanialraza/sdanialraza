@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Activity from "$lib/components/Activity.svelte";
-  import SocialLinks from "$lib/components/SocialLinks.svelte";
-  import Spotify from "$lib/components/Spotify.svelte";
-  import Status from "$lib/components/Status.svelte";
-  import Time from "$lib/components/Time.svelte";
-  import { calculateAge } from "$lib/util";
+  import Activity from "#lib/components/Activity.svelte";
+  import SocialLinks from "#lib/components/SocialLinks.svelte";
+  import Spotify from "#lib/components/Spotify.svelte";
+  import Status from "#lib/components/Status.svelte";
+  import Time from "#lib/components/Time.svelte";
+  import { calculateAge } from "#lib/util/index.ts";
 </script>
 
 <main class="flex min-h-screen flex-col items-center justify-center">

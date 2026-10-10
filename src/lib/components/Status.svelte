@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { DISCORD_STATUS_COLORS, DISCORD_STATUS_MAPPINGS } from "$lib/util";
-  import { getLanyardContext } from "$lib/context/lanyard.svelte";
+  import { DISCORD_STATUS_COLORS, DISCORD_STATUS_MAPPINGS } from "#lib/util/index.ts";
+  import { getLanyardContext } from "#lib/context/lanyard.svelte.ts";
 
   interface Props {
     children: Snippet;

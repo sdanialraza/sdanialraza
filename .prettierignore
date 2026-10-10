@@ -4,6 +4,10 @@ LICENSE
 # Dependencies
 node_modules
 pnpm-lock.yaml
+pnpm-workspace.yaml
 
 # SvelteKit
 .svelte-kit
+
+# Wrangler
+.wrangler

@@ -1,4 +1,4 @@
-import { DATE_OF_BIRTH } from "$lib/util/constants";
+import { DATE_OF_BIRTH } from "#lib/util/constants.ts";
 
 export function calculateAge() {
   return new Date(Date.now() - DATE_OF_BIRTH.getTime()).getFullYear() - 1_970;

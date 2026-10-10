@@ -1,8 +1,8 @@
 <script lang="ts">
   import LuGamepad2 from "~icons/lucide/gamepad-2";
   import { Temporal } from "temporal-polyfill";
-  import { getLanyardContext } from "$lib/context/lanyard.svelte";
-  import { resolveActivityAssetUrl } from "$lib/util";
+  import { getLanyardContext } from "#lib/context/lanyard.svelte.ts";
+  import { resolveActivityAssetUrl } from "#lib/util/index.ts";
 
   const lanyard = getLanyardContext();
 

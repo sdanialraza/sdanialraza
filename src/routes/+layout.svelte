@@ -1,7 +1,7 @@
 <script lang="ts">
   import { untrack, type Snippet } from "svelte";
   import { SvelteTheme } from "svelte-themes";
-  import { createLanyardSocket, setLanyardContext } from "$lib/context/lanyard.svelte";
+  import { createLanyardSocket, setLanyardContext } from "#lib/context/lanyard.svelte.ts";
   import "../app.css";
   import type { LayoutData } from "./$types";
 
