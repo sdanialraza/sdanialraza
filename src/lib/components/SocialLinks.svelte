@@ -43,6 +43,8 @@
     {/each}
   </div>
   <div class="mx-3 h-5 w-px rounded-full bg-black/20 dark:bg-white/20"></div>
-  {@render link(REPOSITORY_LINK, "Source code", FaSolidCode)}
-  <ThemeToggle />
+  <div class="flex gap-x-2">
+    {@render link(REPOSITORY_LINK, "Source code", FaSolidCode)}
+    <ThemeToggle />
+  </div>
 </section>
