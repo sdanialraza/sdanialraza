@@ -4,12 +4,28 @@
   --charcoal: #1c1b22;
 }
 
-@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
+  --theme-fg: #000;
+  --theme-muted: var(--color-gray-800);
+  --theme-label: #000;
   --icon-color: #000;
 }
 
+:focus-visible {
+  outline: 2px solid var(--theme-fg);
+  outline-offset: 2px;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+}
+
 html.dark {
+  --theme-fg: #fff;
+  --theme-muted: var(--color-gray-400);
+  --theme-label: var(--color-gray-400);
   --icon-color: #fff;
 }

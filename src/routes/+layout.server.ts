@@ -1,5 +1,5 @@
 import type { LayoutServerLoad } from "./$types";
-import type { LanyardResponse } from "#lib/types/lanyard.ts";
+import type { LanyardResponse } from "#lib/types/index.ts";
 import { LANYARD_API_URL, LANYARD_OFFLINE_FALLBACK } from "#lib/util/index.ts";
 
 export const load: LayoutServerLoad = async ({ fetch }) => {

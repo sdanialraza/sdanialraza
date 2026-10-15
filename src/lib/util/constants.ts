@@ -1,4 +1,4 @@
-import type { DiscordStatus, LanyardData } from "#lib/types/lanyard.ts";
+import type { DiscordStatus, LanyardData } from "#lib/types/index.ts";
 
 export const DATE_OF_BIRTH = new Date("2003-10-18");
 
@@ -43,10 +43,12 @@ export const LANYARD_WS_URL = "wss://api.lanyard.rest/socket";
 
 export const REPOSITORY_LINK = "https://github.com/sdanialraza/sdanialraza";
 
+export const SITE_URL = "https://sdanialraza.dev";
+
 export const SOCIAL_LINKS = {
   Discord: `https://discord.com/users/${DISCORD_USER_ID}`,
   Email: "mailto:danialrazafb@gmail.com",
   GitHub: "https://github.com/sdanialraza",
   Linkedin: "https://www.linkedin.com/in/sdanialraza",
-  Twitter: "https://twitter.com/sdanialraza",
+  X: "https://x.com/sdanialraza",
 } as const;

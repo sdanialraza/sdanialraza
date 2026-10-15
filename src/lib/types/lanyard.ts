@@ -1,6 +1,6 @@
 export type DiscordStatus = "dnd" | "idle" | "offline" | "online";
 
-export interface Activity {
+export type Activity = {
   application_id?: string;
   assets?: {
     large_image?: string;
@@ -15,18 +15,18 @@ export interface Activity {
   state?: string;
   timestamps?: { end?: number; start: number };
   type: number;
-}
+};
 
-export interface SpotifyData {
+export type SpotifyData = {
   album: string;
   album_art_url: string;
   artist: string;
   song: string;
   timestamps: { end: number; start: number };
   track_id: string;
-}
+};
 
-export interface LanyardData {
+export type LanyardData = {
   active_on_discord_desktop: boolean;
   active_on_discord_mobile: boolean;
   active_on_discord_web: boolean;
@@ -43,16 +43,16 @@ export interface LanyardData {
   kv: Record<string, string>;
   listening_to_spotify: boolean;
   spotify: SpotifyData | null;
-}
+};
 
-export interface LanyardResponse {
+export type LanyardResponse = {
   data: LanyardData;
   success: boolean;
-}
+};
 
-export interface LanyardWebSocketMessage {
+export type LanyardWebSocketMessage = {
   d: LanyardData | { heartbeat_interval: number };
   op: number;
   seq: number;
   t: "INIT_STATE" | "PRESENCE_UPDATE" | null;
-}
+};

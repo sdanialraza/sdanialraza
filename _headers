@@ -1,0 +1,11 @@
+/elysium/card.jpg
+  Cache-Control: public, max-age=604800
+
+/logo.*
+  Cache-Control: public, max-age=604800
+
+/*.png
+  Cache-Control: public, max-age=604800
+
+/favicon.ico
+  Cache-Control: public, max-age=604800

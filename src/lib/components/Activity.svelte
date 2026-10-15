@@ -6,8 +6,9 @@
 
   const lanyard = getLanyardContext();
 
-  let activity = $derived(lanyard.data.activities.find(a => a.type === 0));
+  let activity = $derived(lanyard.data.activities.find(({ type }) => type === 0));
   let assetUrl = $derived(resolveActivityAssetUrl(activity?.application_id, activity?.assets?.large_image));
+  let crossOrigin = $derived(assetUrl?.startsWith("https://cdn.discordapp.com/") ? ("anonymous" as const) : undefined);
   let altText = $derived(activity?.assets?.large_text ?? activity?.name ?? "Activity");
 
   let elapsed = $state("");
@@ -39,19 +40,19 @@
 </script>
 
 {#if activity}
-  <div class="mt-1 flex min-w-0 items-center gap-x-2 text-sm text-gray-800 dark:text-gray-400">
+  <div class="mt-1 flex min-w-0 items-center gap-x-2 text-sm text-(--theme-muted)">
     {#if assetUrl}
-      <img alt={altText} class="size-4 shrink-0 rounded-sm object-cover" src={assetUrl} />
+      <img alt={altText} class="size-4 shrink-0 rounded-sm object-cover" crossorigin={crossOrigin} src={assetUrl} />
     {:else}
       <LuGamepad2 class="size-4 shrink-0 text-(--icon-color)" />
     {/if}
     <span class="min-w-0 truncate">
       <span class="font-medium">{activity.name}</span>
       {#if activity.details}
-        <span class="text-gray-500 dark:text-gray-500"> &mdash; {activity.details}</span>
+        <span class="text-gray-600 dark:text-gray-400"> &mdash; {activity.details}</span>
       {/if}
       {#if elapsed}
-        <span class="text-gray-500 tabular-nums dark:text-gray-500"> &middot; {elapsed}</span>
+        <span class="text-gray-600 tabular-nums dark:text-gray-400"> &middot; {elapsed}</span>
       {/if}
     </span>
   </div>

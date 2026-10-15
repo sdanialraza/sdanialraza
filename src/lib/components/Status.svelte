@@ -3,9 +3,9 @@
   import { DISCORD_STATUS_COLORS, DISCORD_STATUS_MAPPINGS } from "#lib/util/index.ts";
   import { getLanyardContext } from "#lib/context/lanyard.svelte.ts";
 
-  interface Props {
+  type Props = {
     children: Snippet;
-  }
+  };
 
   let { children }: Props = $props();
 
@@ -16,7 +16,7 @@
   let status = $derived(DISCORD_STATUS_MAPPINGS[discordStatus]);
 </script>
 
-<aside class="flex items-center gap-x-2 text-sm font-semibold dark:text-gray-400">
+<aside class="flex items-center gap-x-2 text-sm font-semibold text-(--theme-label)">
   <span class={`ml-1 h-3 w-3 rounded-full md:ml-0 ${color}`}></span>
   <p>{status}</p>
   &mdash;

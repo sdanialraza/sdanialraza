@@ -13,7 +13,8 @@
       <img
         alt="Danial Raza"
         class="h-15 w-15 rounded-full bg-cover md:h-20 md:w-20 lg:h-25 lg:w-25"
-        src="/logo.png"
+        fetchpriority="high"
+        src="/logo.webp"
         width="100"
         height="100"
       />
@@ -26,7 +27,7 @@
       <h1 class="text-3xl font-bold">Danial Raza</h1>
       <Spotify />
       <Activity />
-      <p class="mt-2 text-sm text-gray-800 dark:text-gray-400">A {calculateAge()}-year-old software developer</p>
+      <p class="mt-2 text-sm text-(--theme-muted)">A {calculateAge()}-year-old software developer</p>
       <SocialLinks />
     </section>
   </div>

@@ -1,12 +1,12 @@
 import { getContext, setContext } from "svelte";
-import type { LanyardData, LanyardWebSocketMessage } from "#lib/types/lanyard.ts";
+import type { LanyardData, LanyardWebSocketMessage } from "#lib/types/index.ts";
 import { DISCORD_USER_ID, LANYARD_WS_URL } from "#lib/util/index.ts";
 
 export const LANYARD_CONTEXT_KEY = Symbol("lanyard");
 
-export interface LanyardContext {
+export type LanyardContext = {
   readonly data: LanyardData;
-}
+};
 
 export function getLanyardContext(): LanyardContext {
   return getContext<LanyardContext>(LANYARD_CONTEXT_KEY);
