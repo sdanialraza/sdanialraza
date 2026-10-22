@@ -186,8 +186,8 @@ importers:
         specifier: ^1.2.4
         version: 1.2.4
       '@iconify-json/lucide':
-        specifier: ^1.2.145
-        version: 1.2.145
+        specifier: ^1.2.146
+        version: 1.2.146
       '@sveltejs/adapter-cloudflare':
         specifier: ^8.0.1
         version: 8.0.1(@sveltejs/kit@3.1.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.2(@typescript-eslint/types@8.71.2))(vite@8.3.4(@types/node@26.6.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.8.2)))(svelte@5.57.2(@typescript-eslint/types@8.71.2))(typescript@6.0.3)(vite@8.3.4(@types/node@26.6.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.8.2)))(wrangler@4.149.0(@cloudflare/workers-types@5.20261009.1)(@types/node@26.6.5))
@@ -635,8 +635,8 @@ packages:
   '@iconify-json/fa6-solid@1.2.4':
     resolution: {integrity: sha512-LmDNNdJVyvF5mPm1yxWvL8KjCc/E8LzoqnF1LNTVpyY2ZJRUlGOWuPIThdbuFBF2IovgttkIyumhyqfmlHdwKg==}
 
-  '@iconify-json/lucide@1.2.145':
-    resolution: {integrity: sha512-eYBZipY6g4bbJNyKBAEq1wBy3mJ2jKtI4O2K30ArO2lMpVDOEuQfu5aDZhiimj1+Q/mIrn3ZxnDeX1BbILxkwQ==}
+  '@iconify-json/lucide@1.2.146':
+    resolution: {integrity: sha512-T7qetsZJ682CCVT2X8C5uYEF6G/mtSoPl8F87wvu1LbfeVt4RxdP03NtaAs4RrrAXbWHBLjKrb8cmMtDucoI5g==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2835,7 +2835,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/lucide@1.2.145':
+  '@iconify-json/lucide@1.2.146':
     dependencies:
       '@iconify/types': 2.0.0
 
