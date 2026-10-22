@@ -27,7 +27,7 @@
     "@commitlint/config-angular": "^21.2.3",
     "@iconify-json/fa6-brands": "^1.2.6",
     "@iconify-json/fa6-solid": "^1.2.4",
-    "@iconify-json/lucide": "^1.2.145",
+    "@iconify-json/lucide": "^1.2.146",
     "@sveltejs/adapter-cloudflare": "^8.0.1",
     "@sveltejs/kit": "^3.1.0",
     "@sveltejs/vite-plugin-svelte": "^7.3.1",
