@@ -44,7 +44,7 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "svelte": "^5.57.3",
     "svelte-check": "^4.7.8",
-    "tailwindcss": "^4.3.4",
+    "tailwindcss": "^4.3.5",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.72.1",
     "unplugin-icons": "^24.0.0",
